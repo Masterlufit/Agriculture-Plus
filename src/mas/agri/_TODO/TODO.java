@@ -1,13 +1,11 @@
 package mas.agri._TODO;
 
 public class TODO {
-	// Add function to stove
-
 	/**
 	 * Mob Drops
 	 */
 	// Squid: calamari
-	// Guardian: spiked meat
+	// Guardian: fish fillet
 	// Villager: villager nose
 
 	/**
@@ -51,8 +49,7 @@ public class TODO {
 	/**
 	 * Tools
 	 */
-	// Knife:
+	// Cutting Station [M-Block]:
 	// Oven [M-Block]:
 	// Refrigerator [M-Block]:
-	// Mill [M-Block]:
 }

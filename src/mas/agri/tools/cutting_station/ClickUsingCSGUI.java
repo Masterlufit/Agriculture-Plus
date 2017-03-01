@@ -1,4 +1,4 @@
-package mas.agri.tools.big_stove;
+package mas.agri.tools.cutting_station;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -7,7 +7,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-public class ClickUsingBigStoveGUI implements Listener {
+public class ClickUsingCSGUI implements Listener {
 	@EventHandler
 	public void onClick(InventoryClickEvent e) {
 		Inventory inv = e.getInventory();
@@ -16,7 +16,7 @@ public class ClickUsingBigStoveGUI implements Listener {
 		} catch (Exception ex) {
 			return;
 		}
-		if (!inv.getName().equals("Agri+ Mill Grinding"))
+		if (!inv.getName().equals("Agri+ CS Cutting"))
 			return;
 		ItemStack clicked = e.getCurrentItem();
 

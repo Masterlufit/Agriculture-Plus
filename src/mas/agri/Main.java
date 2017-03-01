@@ -21,6 +21,9 @@ import mas.agri.food.mutation.FMT_Gapple;
 import mas.agri.food.mutation.FMT_NotchApple;
 import mas.agri.food.pizza.CheesePizza;
 import mas.agri.food.pizza.EatCheesePizza;
+import mas.agri.food.potato.chips.CookPotatoChips;
+import mas.agri.food.potato.chips.CutChips;
+import mas.agri.food.potato.chips.EatChips;
 import mas.agri.food.toast.CookToast;
 import mas.agri.food.toast.EatToast;
 import mas.agri.harvest.Craft_Harvest_Staff;
@@ -28,14 +31,22 @@ import mas.agri.harvest.blocks.Cactus_Fruit;
 import mas.agri.harvest.mobs.VillagerNose;
 import mas.agri.other.FMT_Leather;
 import mas.agri.raw_material.mill.WheatToFlour;
+import mas.agri.tools.big_stove.ExitBigStove;
 import mas.agri.tools.big_stove.OpenBigStove;
+import mas.agri.tools.cutting_station.ClickUsingCSGUI;
+import mas.agri.tools.cutting_station.ExitCS;
+import mas.agri.tools.cutting_station.OpenCS;
 import mas.agri.tools.food_mutation_table.ClickUsingFMTGUI;
+import mas.agri.tools.food_mutation_table.ExitFMT;
 import mas.agri.tools.food_mutation_table.OpenFMT;
 import mas.agri.tools.juicer.ClickUsingJuicerGUI;
+import mas.agri.tools.juicer.ExitJuicer;
 import mas.agri.tools.juicer.OpenJuicer;
 import mas.agri.tools.mill.ClickUsingMillGUI;
+import mas.agri.tools.mill.ExitMill;
 import mas.agri.tools.mill.OpenMill;
 import mas.agri.tools.stove.ClickUsingStoveGUI;
+import mas.agri.tools.stove.ExitStove;
 import mas.agri.tools.stove.OpenStove;
 
 public class Main extends JavaPlugin {
@@ -68,7 +79,7 @@ public class Main extends JavaPlugin {
 	}
 
 	private void registerCommands() {
-		getCommand("agriculture").setExecutor(new Handler_agri());
+		getCommand("a+").setExecutor(new Handler_agri());
 	}
 
 	private void registerEvents() {
@@ -80,14 +91,17 @@ public class Main extends JavaPlugin {
 		// Stove
 		pm.registerEvents(new OpenStove(), this);
 		pm.registerEvents(new ClickUsingStoveGUI(), this);
+		pm.registerEvents(new ExitStove(), this);
 		// Use Stove
 		pm.registerEvents(new CookBread(this), this);
 		pm.registerEvents(new CookToast(this), this);
 		pm.registerEvents(new CookCheese(this), this);
+		pm.registerEvents(new CookPotatoChips(this), this);
 
 		// FMT
 		pm.registerEvents(new OpenFMT(), this);
 		pm.registerEvents(new ClickUsingFMTGUI(), this);
+		pm.registerEvents(new ExitFMT(), this);
 		// Use FMT
 		pm.registerEvents(new FMT_Gapple(this), this);
 		pm.registerEvents(new FMT_NotchApple(this), this);
@@ -96,11 +110,13 @@ public class Main extends JavaPlugin {
 		// Mill
 		pm.registerEvents(new OpenMill(), this);
 		pm.registerEvents(new ClickUsingMillGUI(), this);
+		pm.registerEvents(new ExitMill(), this);
 		// Use Mill
 		pm.registerEvents(new WheatToFlour(this), this);
 
 		// Big Stove
 		pm.registerEvents(new OpenBigStove(), this);
+		pm.registerEvents(new ExitBigStove(), this);
 		// Use Big Stove
 		pm.registerEvents(new SteakBurger(), this);
 		pm.registerEvents(new CheesePizza(), this);
@@ -108,6 +124,7 @@ public class Main extends JavaPlugin {
 		// Juicer
 		pm.registerEvents(new OpenJuicer(), this);
 		pm.registerEvents(new ClickUsingJuicerGUI(), this);
+		pm.registerEvents(new ExitJuicer(), this);
 		// Use Juicer
 		pm.registerEvents(new SugarCaneJuice(this), this);
 		pm.registerEvents(new AppleJuice(this), this);
@@ -115,11 +132,19 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new CarrotJuice(this), this);
 		pm.registerEvents(new WatermelonJuice(this), this);
 
+		// Cutting Station
+		pm.registerEvents(new OpenCS(), this);
+		pm.registerEvents(new ClickUsingCSGUI(), this);
+		pm.registerEvents(new ExitCS(), this);
+		// Use Cutting Station
+		pm.registerEvents(new CutChips(this), this);
+
 		/**
 		 * Register Food
 		 */
 		pm.registerEvents(new EatToast(), this);
 		pm.registerEvents(new EatCheesePizza(), this);
+		pm.registerEvents(new EatChips(), this);
 
 		// Harvest from Blocks
 		pm.registerEvents(new Cactus_Fruit(), this);

@@ -1,4 +1,4 @@
-package mas.agri.tools.big_stove;
+package mas.agri.tools.cutting_station;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -10,9 +10,9 @@ import org.bukkit.inventory.ItemStack;
 
 import mas.agri.ItemConfiguration;
 
-public class UsingBigStoveGUI {
+public class UsingCSGUI {
 	public static void useStove(Player p, int progress, ItemStack output) {
-		Inventory inv = Bukkit.createInventory(null, 9, "Agri+ Mill Grinding");
+		Inventory inv = Bukkit.createInventory(null, 9, "Agri+ CS Cutting");
 		ItemStack redGlass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 14);
 		ItemConfiguration.nameItem(redGlass, " ");
 		ItemStack greenGlass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 5);
@@ -38,6 +38,6 @@ public class UsingBigStoveGUI {
 			inv.setItem(8, output);
 		}
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), Sound.BLOCK_GRAVEL_STEP, 10, 0);
+		p.playSound(p.getLocation(), Sound.BLOCK_STONE_PLACE, 10, 1);
 	}
 }

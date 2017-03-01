@@ -7,3 +7,7 @@ commands:
 permissions:
   agriplus:
     default: op
+  a+:
+permissions:
+  aplus:
+    default: op

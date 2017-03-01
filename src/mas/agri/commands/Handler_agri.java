@@ -16,7 +16,12 @@ public class Handler_agri implements CommandExecutor {
 			return false;
 		}
 		Player p = (Player) sender;
-		
+		String subCat = args[0];
+		if (subCat == null || subCat.equalsIgnoreCase("help")) {
+			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
+			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+		}
 		p.playSound(p.getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, 10, 1);
 		return false;
 	}

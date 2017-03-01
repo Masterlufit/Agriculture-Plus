@@ -1,4 +1,4 @@
-package mas.agri.tools.mill;
+package mas.agri.tools.cutting_station;
 
 import java.util.HashMap;
 
@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 import mas.agri.ItemConfiguration;
 
-public class OpenMill implements Listener {
+public class OpenCS implements Listener {
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();
 
 	@EventHandler
@@ -26,9 +26,9 @@ public class OpenMill implements Listener {
 		Player p = e.getPlayer();
 		Block b = e.getClickedBlock();
 
-		if (b.getType() != Material.FENCE)
+		if (b.getType() != Material.DIODE_BLOCK_OFF)
 			return;
-		if (b.getLocation().add(0, -1, 0).getBlock().getType() != Material.IRON_BLOCK)
+		if (b.getLocation().add(0, -1, 0).getBlock().getType() != Material.WOOD)
 			return;
 
 		if (p.isSneaking())
@@ -44,15 +44,15 @@ public class OpenMill implements Listener {
 		}
 		cooldowns.put(p.getName(), System.currentTimeMillis());
 
-		Inventory inv = Bukkit.createInventory(null, 9, "Agri+ Mill");
-		ItemStack gear = new ItemStack(Material.CLAY_BALL);
-		ItemConfiguration.nameItem(gear, ChatColor.GREEN + "Grind");
+		Inventory inv = Bukkit.createInventory(null, 9, "Agri+ CS");
+		ItemStack icon = new ItemStack(Material.CLAY_BALL);
+		ItemConfiguration.nameItem(icon, ChatColor.GREEN + "Cut");
 		ItemStack barrier = new ItemStack(Material.BARRIER);
 		ItemConfiguration.nameItem(barrier, ChatColor.RED + "Output");
 
 		for (int a = 0; a < 9; a++)
 			inv.setItem(a, ItemConfiguration.blackGlass());
-		inv.setItem(4, gear);
+		inv.setItem(4, icon);
 		inv.setItem(0, null);
 		inv.setItem(8, barrier);
 
