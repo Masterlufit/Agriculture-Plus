@@ -1,14 +1,9 @@
-#############################
-## COPYRIGHT MASTERLU 2017 ##
-#############################
+name: AgriPlus
 main: mas.agri.Main
 version: 1.0 Alpha
-name: AgriPlus
-#
+developers: [Stormcraftking, Masterlu]
 commands:
   agriculture:
-#
 permissions:
-#
   agriplus:
     default: op

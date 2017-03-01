@@ -12,7 +12,11 @@ import mas.agri.food.burger.SteakBurger;
 import mas.agri.food.cheese.CookCheese;
 import mas.agri.food.dough.BlockThrowDough;
 import mas.agri.food.dough.MakeDough;
+import mas.agri.food.juice.AppleJuice;
+import mas.agri.food.juice.CarrotJuice;
+import mas.agri.food.juice.OrangeJuice;
 import mas.agri.food.juice.SugarCaneJuice;
+import mas.agri.food.juice.WatermelonJuice;
 import mas.agri.food.mutation.FMT_Gapple;
 import mas.agri.food.mutation.FMT_NotchApple;
 import mas.agri.food.pizza.CheesePizza;
@@ -40,6 +44,8 @@ public class Main extends JavaPlugin {
 		PluginDescriptionFile pdFile = getDescription();
 		Logger logger = getLogger();
 
+		logger.info("Enabling AgriPlus");
+		
 		logger.info(pdFile.getName() + "has been enabled! [Version " + pdFile.getVersion() + "]");
 		logger.info("This plugin is still work in progress");
 
@@ -55,6 +61,8 @@ public class Main extends JavaPlugin {
 	public void onDisable() {
 		PluginDescriptionFile pdFile = getDescription();
 		Logger logger = getLogger();
+		
+		logger.info("Disabling AgriPlus");
 
 		logger.info(pdFile.getName() + "has been disabled!");
 	}
@@ -102,6 +110,10 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new ClickUsingJuicerGUI(), this);
 		// Use Juicer
 		pm.registerEvents(new SugarCaneJuice(this), this);
+		pm.registerEvents(new AppleJuice(this), this);
+		pm.registerEvents(new OrangeJuice(this), this);
+		pm.registerEvents(new CarrotJuice(this), this);
+		pm.registerEvents(new WatermelonJuice(this), this);
 
 		/**
 		 * Register Food
