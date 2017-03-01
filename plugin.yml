@@ -1,0 +1,14 @@
+#############################
+## COPYRIGHT MASTERLU 2017 ##
+#############################
+main: mas.agri.Main
+version: 1.0 Alpha
+name: AgriPlus
+#
+commands:
+  agriculture:
+#
+permissions:
+#
+  agriplus:
+    default: op
