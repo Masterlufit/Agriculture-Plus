@@ -3,9 +3,9 @@ version: 1.0 Alpha
 name: AgriPlus
 #
 commands:
-  agriculture:
+  a+:
 #
 permissions:
 #
-  agriplus:
+  aplus:
     default: op
