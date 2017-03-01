@@ -102,7 +102,7 @@ public class WatermelonJuice implements Listener{
 			p.getInventory().setItemInMainHand(null);
 		else if (p.getInventory().getItemInOffHand().getType() == Material.POTION)
 			p.getInventory().setItemInOffHand(null);
-		p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 1 * 20, 3, true), true);
+		p.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 1 * 20, 3, true), true);
 		HungerMan.addHunger(p, 4);
 	}
 }
