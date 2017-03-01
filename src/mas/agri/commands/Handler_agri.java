@@ -21,9 +21,13 @@ public class Handler_agri implements CommandExecutor {
 			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
 			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-		}
+		}else if(subCat.equalsIgnoreCase("reload")){}
+		p.performCommand("plugman reload AgriPlus");
+		p.sendMessage(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "SUCCESS" + ChatColor.GREEN + "AgriPlus has sucessfully reloaded!");
 		p.playSound(p.getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, 10, 1);
 		return false;
+		
+		
 	}
 
 }
