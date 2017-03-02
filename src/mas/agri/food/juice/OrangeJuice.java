@@ -18,7 +18,7 @@ import mas.agri.Main;
 import mas.agri.food.HungerMan;
 import mas.agri.tools.juicer.UsingJuicerGUI;
 
-public class OrangeJuice implements Listener{
+public class OrangeJuice implements Listener {
 	Main pl;
 
 	public OrangeJuice(Main plugin) {
@@ -67,7 +67,7 @@ public class OrangeJuice implements Listener{
 				return;
 			if (item.getType() != Material.APPLE)
 				return;
-			if (item.getItemMeta().hasDisplayName())
+			if (!item.getItemMeta().hasDisplayName())
 				return;
 			if (item.getAmount() != 1)
 				return;
@@ -102,8 +102,7 @@ public class OrangeJuice implements Listener{
 			p.getInventory().setItemInMainHand(null);
 		else if (p.getInventory().getItemInOffHand().getType() == Material.POTION)
 			p.getInventory().setItemInOffHand(null);
-		p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 1 * 20, 3, true), true);
+		p.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 60 * 20, 0, true), true);
 		HungerMan.addHunger(p, 4);
 	}
 }
-

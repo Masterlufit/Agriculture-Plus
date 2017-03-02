@@ -79,7 +79,7 @@ public class Main extends JavaPlugin {
 	}
 
 	private void registerCommands() {
-		getCommand("a+").setExecutor(new Handler_agri());
+		getCommand("aplus").setExecutor(new Handler_agri());
 	}
 
 	private void registerEvents() {

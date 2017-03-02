@@ -65,7 +65,7 @@ public class CarrotJuice implements Listener {
 
 			if (bottle.getType() != Material.GLASS_BOTTLE)
 				return;
-			if (item.getType() != Material.CARROT)
+			if (item.getType() != Material.CARROT_ITEM)
 				return;
 			if (item.getItemMeta().hasDisplayName())
 				return;

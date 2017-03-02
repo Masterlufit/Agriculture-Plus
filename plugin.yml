@@ -3,11 +3,7 @@ main: mas.agri.Main
 version: 1.0 Alpha
 developers: [Stormcraftking, Masterlu]
 commands:
-  agriculture:
+  aplus:
 permissions:
   agriplus:
-    default: op
-  a+:
-permissions:
-  aplus:
     default: op
