@@ -7,6 +7,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import mas.agri.commands.Handler_agri;
+import mas.agri.commands.machine.Click_Machine_GUI;
+import mas.agri.commands.machine.machine_help._machine_help_NoClick;
 import mas.agri.food.CookBread;
 import mas.agri.food.burger.SteakBurger;
 import mas.agri.food.cheese.CookCheese;
@@ -56,7 +58,6 @@ public class Main extends JavaPlugin {
 		Logger logger = getLogger();
 
 		logger.info("Enabling AgriPlus");
-		
 		logger.info(pdFile.getName() + "has been enabled! [Version " + pdFile.getVersion() + "]");
 		logger.info("This plugin is still work in progress");
 
@@ -72,9 +73,8 @@ public class Main extends JavaPlugin {
 	public void onDisable() {
 		PluginDescriptionFile pdFile = getDescription();
 		Logger logger = getLogger();
-		
-		logger.info("Disabling AgriPlus");
 
+		logger.info("Disabling AgriPlus");
 		logger.info(pdFile.getName() + "has been disabled!");
 	}
 
@@ -84,6 +84,10 @@ public class Main extends JavaPlugin {
 
 	private void registerEvents() {
 		PluginManager pm = getServer().getPluginManager();
+
+		// Help Events
+		pm.registerEvents(new Click_Machine_GUI(), this);
+		pm.registerEvents(new _machine_help_NoClick(), this);
 
 		/**
 		 * Register Machines & Recipe

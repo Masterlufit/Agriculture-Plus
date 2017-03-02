@@ -37,6 +37,13 @@ public class ItemConfiguration {
 		return item;
 	}
 
+	public static ItemStack arrayLoreItem(ItemStack item, List<String> lore) {
+		ItemMeta meta = item.getItemMeta();
+		meta.setLore(lore);
+		item.setItemMeta(meta);
+		return item;
+	}
+
 	public static ItemStack glowItem(ItemStack item) {
 		item.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 1);
 		ItemMeta meta = item.getItemMeta();

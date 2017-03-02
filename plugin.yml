@@ -1,9 +1,14 @@
 name: AgriPlus
+#
 main: mas.agri.Main
-version: 1.0 Alpha
+#
+version: 1.2.6 Alpha
+#
 developers: [Stormcraftking, Masterlu]
+#
 commands:
   aplus:
+#
 permissions:
-  agriplus:
+  aplus.placeholder:
     default: op

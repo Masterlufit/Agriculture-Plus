@@ -7,6 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import mas.agri.commands.machine.Handler_agri_machine;
+
 public class Handler_agri implements CommandExecutor {
 
 	@Override
@@ -20,23 +22,26 @@ public class Handler_agri implements CommandExecutor {
 		try {
 			subCat = args[0];
 		} catch (Exception e) {
-			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
-			p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
-			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+			mainHelp(p);
 			return false;
 		}
 		if (subCat == null || subCat.equalsIgnoreCase("help")) {
-			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
-			p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
-			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-		} else if (subCat.equalsIgnoreCase("reload")) {
+			mainHelp(p);
+		} else if (subCat.equalsIgnoreCase("reload") || subCat.equalsIgnoreCase("r")) {
 			p.performCommand("plugman reload AgriPlus");
+		} else if (subCat.equals("machine")) {
+			Handler_agri_machine.help(p);
 		}
 		p.playSound(p.getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, 10, 1);
 		return false;
 
 	}
 
+	public static void mainHelp(Player p) {
+		p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+		p.sendMessage(ChatColor.YELLOW + "AgriPlus Help:");
+		p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
+		p.sendMessage(ChatColor.AQUA + "/aplus machine -- list of machines");
+		p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+	}
 }

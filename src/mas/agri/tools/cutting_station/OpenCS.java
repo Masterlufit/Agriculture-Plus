@@ -26,9 +26,9 @@ public class OpenCS implements Listener {
 		Player p = e.getPlayer();
 		Block b = e.getClickedBlock();
 
-		if (b.getType() != Material.DIODE_BLOCK_OFF)
+		if (b.getType() != Material.IRON_PLATE)
 			return;
-		if (b.getLocation().add(0, -1, 0).getBlock().getType() != Material.WOOD)
+		if (b.getLocation().add(0, -1, 0).getBlock().getType() != Material.PISTON_BASE)
 			return;
 
 		if (p.isSneaking())
