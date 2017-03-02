@@ -16,10 +16,20 @@ public class Handler_agri implements CommandExecutor {
 			return false;
 		}
 		Player p = (Player) sender;
-		String subCat = args[0];
+		String subCat;
+		try {
+			subCat = args[0];
+		} catch (Exception e) {
+			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
+			p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
+			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+			return false;
+		}
 		if (subCat == null || subCat.equalsIgnoreCase("help")) {
 			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 			p.sendMessage(ChatColor.YELLOW + "Agri+ Commands:");
+			p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
 			p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 		} else if (subCat.equalsIgnoreCase("reload")) {
 			p.performCommand("plugman reload AgriPlus");
