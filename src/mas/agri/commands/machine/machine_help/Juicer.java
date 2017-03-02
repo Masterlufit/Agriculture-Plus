@@ -23,6 +23,7 @@ public class Juicer {
 		ItemConfiguration.nameItem(paper, ChatColor.GREEN + "Desctiption:");
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.DARK_PURPLE + "Need description for Juicer :(");
+		ItemConfiguration.arrayLoreItem(paper, lore);
 
 		// MB
 		ItemStack iron_trap_door = new ItemStack(Material.IRON_TRAPDOOR);

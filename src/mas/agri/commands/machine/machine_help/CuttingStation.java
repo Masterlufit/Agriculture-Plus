@@ -23,6 +23,7 @@ public class CuttingStation {
 		ItemConfiguration.nameItem(paper, ChatColor.GREEN + "Desctiption:");
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.DARK_PURPLE + "Need description for Cutting Station :(");
+		ItemConfiguration.arrayLoreItem(paper, lore);
 
 		// MB
 		ItemStack iron_pressure_plate = new ItemStack(Material.IRON_PLATE);

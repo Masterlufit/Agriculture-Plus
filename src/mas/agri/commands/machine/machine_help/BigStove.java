@@ -51,8 +51,8 @@ public class BigStove {
 
 		inv.setItem(14, daylight);
 		inv.setItem(23, brick);
-		inv.setItem(40, brick);
-		
+		inv.setItem(32, brick);
+
 		inv.setItem(35, back);
 
 		p.openInventory(inv);

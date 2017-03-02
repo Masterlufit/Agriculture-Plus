@@ -23,6 +23,7 @@ public class Mill {
 		ItemConfiguration.nameItem(paper, ChatColor.GREEN + "Desctiption:");
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.DARK_PURPLE + "Need description for mill :(");
+		ItemConfiguration.arrayLoreItem(paper, lore);
 
 		// MB
 		ItemStack fence = new ItemStack(Material.FENCE);

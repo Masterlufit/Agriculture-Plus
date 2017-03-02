@@ -23,6 +23,7 @@ public class Stove {
 		ItemConfiguration.nameItem(paper, ChatColor.GREEN + "Desctiption:");
 		List<String> lore = new ArrayList<String>();
 		lore.add(ChatColor.DARK_PURPLE + "Need description for stove :(");
+		ItemConfiguration.arrayLoreItem(paper, lore);
 
 		// MB
 		ItemStack iron_pressure_plate = new ItemStack(Material.IRON_PLATE);

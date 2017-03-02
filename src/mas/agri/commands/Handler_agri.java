@@ -38,10 +38,12 @@ public class Handler_agri implements CommandExecutor {
 	}
 
 	public static void mainHelp(Player p) {
-		p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+		p.sendMessage(
+				ChatColor.GRAY + "[=-=-=-=-=-=-=-=-=" + ChatColor.GOLD + "oOo" + ChatColor.GRAY + "=-=-=-=-=-=-=-=-=]");
 		p.sendMessage(ChatColor.YELLOW + "AgriPlus Help:");
 		p.sendMessage(ChatColor.AQUA + "/aplus reload -- reload plugin");
-		p.sendMessage(ChatColor.AQUA + "/aplus machine -- list of machines");
-		p.sendMessage(ChatColor.GRAY + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+		p.sendMessage(ChatColor.AQUA + "/aplus machine -- list of machines & function");
+		p.sendMessage(
+				ChatColor.GRAY + "[=-=-=-=-=-=-=-=-=" + ChatColor.GOLD + "oOo" + ChatColor.GRAY + "=-=-=-=-=-=-=-=-=]");
 	}
 }
