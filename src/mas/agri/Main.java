@@ -6,6 +6,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import mas.agri.Events.onJoinEvent;
 import mas.agri.commands.Handler_agri;
 import mas.agri.commands.machine.Click_Machine_GUI;
 import mas.agri.commands.machine.machine_help._machine_help_NoClick;
@@ -61,6 +62,10 @@ public class Main extends JavaPlugin {
 		logger.info(pdFile.getName() + "has been enabled! [Version " + pdFile.getVersion() + "]");
 		logger.info("This plugin is still work in progress");
 
+		PluginManager pm = getServer().getPluginManager();
+
+		pm.registerEvents(new onJoinEvent(), this);
+		
 		registerCommands();
 		registerEvents();
 		registerConfig();
