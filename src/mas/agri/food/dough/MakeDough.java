@@ -12,8 +12,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 
-import mas.agri.ItemConfiguration;
 import mas.agri.Main;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class MakeDough implements Listener {
 	Main pl;

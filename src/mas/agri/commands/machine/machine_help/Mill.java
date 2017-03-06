@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import mas.agri.ItemConfiguration;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class Mill {
 	public static void help(Player p) {

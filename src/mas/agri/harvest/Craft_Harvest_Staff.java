@@ -6,7 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
-import mas.agri.ItemConfiguration;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class Craft_Harvest_Staff {
 	public static void CraftHS() {

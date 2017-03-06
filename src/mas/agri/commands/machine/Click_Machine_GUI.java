@@ -1,6 +1,7 @@
 package mas.agri.commands.machine;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -37,31 +38,25 @@ public class Click_Machine_GUI implements Listener {
 
 		if (display_name.equals(ChatColor.YELLOW + "Stove")) {
 			Stove.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Mill")) {
 			Mill.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Food Mutation Table")) {
 			FMT.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Big Stove")) {
 			BigStove.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Cutting Station")) {
 			CuttingStation.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Juicer")) {
 			Juicer.help(p);
-			return;
 		} else if (display_name.equals(ChatColor.YELLOW + "Notch")) {
 			// Place Holder
-			return;
 		} else if (display_name.equals(ChatColor.RED + "Nothing to see here :P")) {
 			p.closeInventory();
 			p.sendMessage(ChatColor.RED + "I told you nothing to see here >:O");
-			return;
+			p.damage(1);
 		} else {
 			return;
 		}
+		p.playSound(p.getLocation(), Sound.BLOCK_COMPARATOR_CLICK, 10, 1);
 	}
 }

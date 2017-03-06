@@ -6,7 +6,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import mas.agri.Events.onJoinEvent;
 import mas.agri.commands.Handler_agri;
 import mas.agri.commands.machine.Click_Machine_GUI;
 import mas.agri.commands.machine.machine_help._machine_help_NoClick;
@@ -33,6 +32,8 @@ import mas.agri.harvest.Craft_Harvest_Staff;
 import mas.agri.harvest.blocks.Cactus_Fruit;
 import mas.agri.harvest.mobs.VillagerNose;
 import mas.agri.other.FMT_Leather;
+import mas.agri.other_events.BetterDrop;
+import mas.agri.other_events.onJoinEvent;
 import mas.agri.raw_material.mill.WheatToFlour;
 import mas.agri.tools.big_stove.ExitBigStove;
 import mas.agri.tools.big_stove.OpenBigStove;
@@ -62,10 +63,6 @@ public class Main extends JavaPlugin {
 		logger.info(pdFile.getName() + "has been enabled! [Version " + pdFile.getVersion() + "]");
 		logger.info("This plugin is still work in progress");
 
-		PluginManager pm = getServer().getPluginManager();
-
-		pm.registerEvents(new onJoinEvent(), this);
-		
 		registerCommands();
 		registerEvents();
 		registerConfig();
@@ -89,6 +86,9 @@ public class Main extends JavaPlugin {
 
 	private void registerEvents() {
 		PluginManager pm = getServer().getPluginManager();
+
+		// On Join Event
+		pm.registerEvents(new onJoinEvent(), this);
 
 		// Help Events
 		pm.registerEvents(new Click_Machine_GUI(), this);

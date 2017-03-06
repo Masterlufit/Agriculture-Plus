@@ -1,4 +1,4 @@
-package mas.agri;
+package mas.agri.other_events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

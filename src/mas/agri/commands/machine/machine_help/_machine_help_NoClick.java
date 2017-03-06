@@ -2,6 +2,7 @@ package mas.agri.commands.machine.machine_help;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -29,6 +30,8 @@ public class _machine_help_NoClick implements Listener {
 					&& e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().hasDisplayName()
 					&& e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatColor.RED + "Back")) {
 				Handler_agri_machine.help((Player) e.getWhoClicked());
+				((Player) e.getWhoClicked()).playSound(e.getWhoClicked().getLocation(), Sound.BLOCK_COMPARATOR_CLICK,
+						10, 1);
 			}
 		}
 	}

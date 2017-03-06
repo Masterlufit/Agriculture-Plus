@@ -14,8 +14,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import mas.agri.InventoryConfiguration;
-import mas.agri.ItemConfiguration;
+import mas.agri.z_plugin_develop_tools.InventoryConfiguration;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class OpenBigStove implements Listener {
 	public HashMap<String, Long> cooldowns = new HashMap<String, Long>();

@@ -13,10 +13,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import mas.agri.ItemConfiguration;
 import mas.agri.Main;
 import mas.agri.food.HungerMan;
 import mas.agri.tools.juicer.UsingJuicerGUI;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class AppleJuice implements Listener {
 	Main pl;

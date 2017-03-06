@@ -7,8 +7,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import mas.agri.InventoryConfiguration;
-import mas.agri.ItemConfiguration;
+import mas.agri.z_plugin_develop_tools.InventoryConfiguration;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class Handler_agri_machine {
 	public static void help(Player p) {

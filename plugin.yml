@@ -10,5 +10,11 @@ commands:
   aplus:
 #
 permissions:
-  aplus.placeholder:
+  aplus.reload.plugman:
+    default: op
+  aplus.reload.config:
+    default: op
+  aplus.help.main:
+    default: op
+  aplus.help.machine:
     default: op

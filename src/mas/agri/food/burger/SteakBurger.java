@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-import mas.agri.ItemConfiguration;
+import mas.agri.z_plugin_develop_tools.ItemConfiguration;
 
 public class SteakBurger implements Listener {
 	@EventHandler
